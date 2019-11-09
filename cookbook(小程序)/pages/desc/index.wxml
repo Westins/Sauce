@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+	<view class="cu-bar bg-white">
+		<view class="action">
+			<text class="cuIcon-titles text-green"></text>
+			<text class="text-xl text-bold">文章详情</text>
+			<text class="text-Abc text-gray self-end margin-left-sm">Blog</text>
+		</view>
+	</view>
+
+	<view class="cu-card case">
+		<view class="cu-item shadow">
+			<view class="image">
+				<image src="../../{{getByIdInfo.ckImg}}" mode="widthFix"></image>
+				<view class="cu-bar bg-shadeBottom">
+					<text class="text-cut">{{getByIdInfo.ckTitle}}</text>
+				</view>
+			</view>
+			<view class="cu-list menu-avatar">
+				<view class="cu-item">
+					<view class="content flex-sub">
+						<view class="text-grey">{{getByIdInfo.ckContent}}</view>
+						<view class="text-gray text-sm flex justify-between">
+							{{getByIdInfo.ckTime}}
+						</view>
+					</view>
+				</view>
+			</view>
+      <view>
+        <button bindtap="back">返回</button>
+      </view>
+		</view>
+	</view>
+
+
+
+
+

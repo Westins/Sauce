@@ -1,0 +1,21 @@
+.head{
+  position: relative;
+}
+
+.in{
+  border: 1rpx solid black;
+  border-radius:10rpx;
+  
+}
+
+.login{
+  display: flex;
+  justify-content: center; /**内容居中*/
+  margin-top: 20rpx;
+}
+
+.btn{
+  width: 200rpx;
+  margin-top: 50rpx;
+  background-color: gold;
+}

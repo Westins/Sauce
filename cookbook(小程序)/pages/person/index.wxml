@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view  style="margin-top:10rpx">
+  <view style="margin:10rpx 10rpx 10rpx 10rpx">头 像：
+    <image src="../../{{auInfo.aHead}}" style="width:150rpx;height:150rpx"></image>
+  </view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx">真实姓名：{{auInfo.aName}}</view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx">昵 称：{{auInfo.aPetName}}</view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx">邮 箱：{{auInfo.aEmail}}</view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx" wx:if="{{auInfo.aSex==0}}">性 别：男</view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx" wx:else>性 别：女</view>
+  <view style="margin:10rpx 10rpx 10rpx 10rpx">电 话：{{auInfo.aPhone}}</view>
+  <button  bindtap='showButton' style="width:350rpx;height:80rpx;font-size:32rpx;margin-top:20rpx">修改个人信息</button>
+</view>

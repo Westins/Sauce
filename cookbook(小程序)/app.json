@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/articleContent/articleContent",
+    "pages/person/index",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+	"backgroundColor":"#ffffff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "香酱频道",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#292929",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/main.png",
+        "selectedIconPath": "img/selectedMain.png"
+      },
+      {
+        "pagePath": "pages/person/index",
+        "iconPath": "img/me.png",
+        "selectedIconPath": "img/me-selected.png",
+        "text": "个人信息"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

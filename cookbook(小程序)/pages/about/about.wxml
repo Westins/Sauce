@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view>
+<form bindsubmit="updInfo">
+  <view>头 像：
+    <image src="../../{{auInfo.aHead}}" style="width:150rpx;height:150rpx"></image>
+  </view>
+  <view>真实姓名：<input value="{{auInfo.aName}}" class="inputsty" name="name" disabled="false"/> 
+  <input value="{{auInfo.aId}}" hidden="{{true}}" name="auid"/></view>
+  <view>昵 称：<input value="{{auInfo.aPetName}}" class="inputsty" name="petName"/></view>
+  <view>邮 箱：<input value="{{auInfo.aEmail}}" class="inputsty" name="email"/></view>
+  <view wx:if="{{auInfo.aSex==0}}">性 别：<input value="男" class="inputsty" name="sex"/></view>
+  <view wx:else>性 别：<input value="女" class="inputsty" name="sex"/></view>
+  <view>电 话：<input value="{{auInfo.aPhone}}" class="inputsty" name="phone"/></view>
+  <button form-type="submit" style="margin-top:30rpx">确认</button>
+  </form>
+</view>

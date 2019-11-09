@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xj.dao.PictureMapper">
+
+	<select id="getAllInfo" resultType="com.xj.pojo.Picture"
+		parameterType="String">
+		select * from t_picture where 1=1
+		<if test="_parameter!='' and _parameter!=null">
+			and pType=#{_parameter}
+		</if>
+	</select>
+	<select id="getContent" resultType="com.xj.pojo.Picture" parameterType="int">
+	select * from t_picture where pId=#{pId}
+	</select>
+	
+	<select id="selPage" resultType="com.xj.pojo.Picture"
+		parameterType="Map">
+		select * from t_picture
+		limit #{start},#{end}
+	</select>
+
+	<select id="selType" resultType="com.xj.pojo.Picture">
+		select distinct pType from
+		t_picture
+	</select>
+
+	<select id="getcookbookbyaid" resultType="com.xj.pojo.CookBook"
+		parameterType="int">
+		select * from t_cookbook as ck ,t_author as a where
+		ck.aid=a.aid and
+		ck.aid=#{0}
+	</select>
+
+	<select id="getcookbooklist" resultType="com.xj.pojo.CookBook">
+		select * from t_cookbook
+	</select>
+
+	<update id="setckstatebyckid" parameterType="com.xj.pojo.CookBook">
+		update t_cookbook
+		set ckState=1 where ckId=#{ckId}
+	</update>
+
+	<delete id="delpicturebypid" parameterType="com.xj.pojo.Picture">
+		delete from t_picture
+		where pId=#{pId}
+	</delete>
+
+	<select id="getpicturelist" resultType="com.xj.pojo.Picture">
+		select * from t_picture
+	</select>
+
+	<insert id="insertpicture" parameterType="com.xj.pojo.Picture">
+		insert into t_picture(pType,pImg,pCaption,pDish)
+		values(#{pType},#{pImg},#{pCaption},#{pDish})
+	</insert>
+
+
+</mapper>

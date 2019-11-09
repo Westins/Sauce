@@ -1,0 +1,11 @@
+<view style="margin-top:200rpx" class="head">
+  <view class="login">
+    <text>账号:</text>
+    <input class="in" bindinput="getaName"></input>
+  </view>
+  <view class="login">
+  <text>密码:</text>
+  <input password="true" class="in" bindinput="getaPwd"></input>
+  </view>
+  <button class="btn" bindtap="login">登录</button>
+ </view>

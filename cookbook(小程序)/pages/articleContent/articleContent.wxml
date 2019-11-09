@@ -1,0 +1,29 @@
+<!--pages/articleContent/articleContent.wxml-->
+<!-- 标题 -->
+<view class="solid-bottom text-xl padding">
+	<text class="text-black text-bold">{{getByIdInfo.ckTitle}}</text>
+  <view class="text-gray text-sm flex justify-between">
+							{{getByIdInfo.ckTime}}
+	</view>
+</view>
+<!-- 标题 end-->
+<!-- 缩略图 -->
+<view class="cu-card case">
+	<view class="cu-item shadow">
+		<view class="image">
+			<image src="../../{{getByIdInfo.ckImg}}" mode="widthFix"></image>
+		</view>
+	</view>
+</view>
+<!-- 缩略图 end-->
+
+<!-- 主体内容 -->
+<!--引入towxml模版入口文件，并使用模版-->
+<view class="padding-sm">
+	<import src="../../towxml/entry.wxml"/>
+	<text>{{getByIdInfo.ckContent}}</text>
+</view>
+<view>
+  <button bindtap="back">返回</button>
+</view>
+<!-- 主体内容 end-->

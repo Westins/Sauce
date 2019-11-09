@@ -1,0 +1,35 @@
+/**index.wxss**/
+.margin{
+  margin: 10rpx 10rpx 0rpx 10rpx;
+}
+.container {
+  padding-top: 30px;
+}
+view.text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px 10px 12px;
+  font-size: 15px;
+  color: #656565;
+   background-color: #ccc;
+}
+view.text text {
+  margin-left: 10px;
+  line-height: 18px;
+ 
+}
+view.text2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px 10px 12px;
+  font-size: 15px;
+  color: #656565;
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
